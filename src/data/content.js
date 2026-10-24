@@ -6,9 +6,10 @@ const GH = "https://github.com/jz-rs";
 export const perfil = {
   nombre: "Jezabel Rosso",
   titulo: "Ingeniera informática",
-  frase: "[COMPLETAR] Una frase que diga qué hacés y para qué.",
+  frase:
+    "Diseño y desarrollo soluciones de software de punta a punta, con foco en la calidad, la claridad y el impacto en el negocio.",
   ubicacion: "Córdoba, Argentina",
-  disponibilidad: "[COMPLETAR] Ej.: Abierta a nuevas oportunidades",
+  disponibilidad: "Siempre abierta a escuchar propuestas",
 };
 
 export const proyectoFinal = {
@@ -164,14 +165,37 @@ export const experiencia = [
 
 export const voluntariados = [
   {
-    nombre: "ONIET",
-    periodo: "[COMPLETAR]",
-    descripcion: "[COMPLETAR] Qué hacías.",
+    nombre: "NASA Space Apps Challenge — San Vicente de Cañete (Perú)",
+    rol: "Marketing, comunicación, diseño y prensa",
+    periodo: "Julio 2026 — Actualidad",
+    actual: true,
+    descripcion:
+      "Formo parte del equipo organizador: creo y difundo contenido para redes y comunico las actividades del evento. Además, fui speaker en las capacitaciones previas a la hackathon con la charla “Road to Next: Construye con lo que tienes” (ciclo Next is You, junto a TechSpira).",
   },
   {
-    nombre: "NASA Space Challenge — San Vicente de Cañete",
-    periodo: "[COMPLETAR]",
-    descripcion: "[COMPLETAR] Qué hacías.",
+    nombre: "ONIET — Olimpíadas Nacionales",
+    rol: "Voluntaria en competencias",
+    periodo: "Octubre 2025",
+    descripcion:
+      "Colaboré en las competencias “Innovation Team” y “Electrónica Discreta”, brindando apoyo operativo y técnico durante las jornadas realizadas en el campus de la Universidad Blas Pascal.",
+  },
+  {
+    nombre: "ONIET — Olimpíadas Nacionales",
+    rol: "Organización de premiaciones",
+    periodo: "Octubre 2022",
+    descripcion:
+      "Voluntariado en apoyo logístico durante las Olimpíadas. Preparación y rotulado de alrededor de 150 medallas para las premiaciones (1°, 2° y 3° puesto), contribuyendo al orden y la eficiencia del evento.",
+  },
+];
+
+export const formacion = [
+  {
+    titulo: "Ingeniería Informática",
+    institucion: "Universidad Blas Pascal — Córdoba",
+    periodo: "Cursado: Marzo 2021 — Noviembre 2025 · Graduada en Octubre 2026",
+    estado: "Graduada",
+    descripcion:
+      "Formación con enfoque práctico en desarrollo de software (incluidos IA y sistemas distribuidos), infraestructura de redes, calidad bajo estándares internacionales y gestión de proyectos.",
   },
 ];
 
@@ -260,8 +284,9 @@ export const cursos = [
 ];
 
 export const contacto = {
-  invitacion: "[COMPLETAR] Una línea invitando a escribirte.",
-  email: "[COMPLETAR] Mail de contacto",
+  invitacion:
+    "Si tenés una propuesta o un proyecto en mente, escribime: me interesa conocerlo.",
+  email: "jezabel.rosso.it@gmail.com",
   github: GH,
-  linkedin: "[COMPLETAR] URL de LinkedIn",
+  linkedin: "https://www.linkedin.com/in/jezabel-rosso/",
 };

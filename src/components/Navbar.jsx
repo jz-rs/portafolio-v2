@@ -4,6 +4,7 @@ import FishIcon from "./FishIcon.jsx";
 
 const links = [
   ["Experiencia", "#experiencia"],
+  ["Formación", "#formacion"],
   ["Proyecto final", "#proyecto-final"],
   ["Proyectos", "#proyectos"],
   ["Cursos", "#cursos"],

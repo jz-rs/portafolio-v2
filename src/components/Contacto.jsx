@@ -30,7 +30,7 @@ export default function Contacto() {
               contacto.linkedin
             ) : (
               <a href={contacto.linkedin} target="_blank" rel="noreferrer">
-                {contacto.linkedin.replace(/^https?:\/\/(www\.)?/, "")}
+                {contacto.linkedin.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")}
               </a>
             )}
           </li>

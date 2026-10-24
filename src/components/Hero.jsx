@@ -20,8 +20,17 @@ export default function Hero() {
           <a href="#contacto" className="link">Contacto</a>
         </div>
         <ul className="hero__facts">
-          <li>📍 {perfil.ubicacion}</li>
-          <li>● {perfil.disponibilidad}</li>
+          <li>
+            <svg className="hero__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" />
+              <circle cx="12" cy="10" r="2.4" />
+            </svg>
+            {perfil.ubicacion}
+          </li>
+          <li>
+            <span className="hero__status" aria-hidden="true" />
+            {perfil.disponibilidad}
+          </li>
         </ul>
       </div>
       <div className="hero__art" aria-hidden="true">

@@ -4,6 +4,7 @@ import ProyectoFinal from "./components/ProyectoFinal.jsx";
 import Proyectos from "./components/Proyectos.jsx";
 import Experiencia from "./components/Experiencia.jsx";
 import Voluntariados from "./components/Voluntariados.jsx";
+import Formacion from "./components/Formacion.jsx";
 import Cursos from "./components/Cursos.jsx";
 import Contacto from "./components/Contacto.jsx";
 import Footer from "./components/Footer.jsx";
@@ -15,6 +16,7 @@ export default function App() {
       <main>
         <Hero />
         <Experiencia />
+        <Formacion />
         <ProyectoFinal />
         <Proyectos />
         <Cursos />
