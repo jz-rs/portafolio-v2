@@ -1,11 +1,13 @@
-import { proyectoFinal as p } from "../data/content.js";
+import { useLang } from "../i18n.jsx";
 
 export default function ProyectoFinal() {
+  const { proyectoFinal: p, ui } = useLang().c;
+
   return (
     <section id="proyecto-final" className="section">
       <div className="band">
         <div className="band__main">
-          <span className="tag tag--light">Proyecto final</span>
+          <span className="tag tag--light">{ui.secciones.proyectoFinal}</span>
           <h2>{p.nombre}</h2>
           <p className="band__sub">{p.subtitulo}</p>
           <p>{p.descripcion}</p>
@@ -20,10 +22,10 @@ export default function ProyectoFinal() {
             ))}
           </div>
           <a className="btn btn--light" href={p.link} target="_blank" rel="noreferrer">
-            Ver en GitHub →
+            {ui.verGithub} →
           </a>
         </div>
-        <div className="band__diagram" aria-label="Arquitectura de Ristorino">
+        <div className="band__diagram" aria-label={ui.diagrama}>
           <div className="node node--portal">Portal</div>
           <div className="node node--rest">REST · La Bella Pizza</div>
           <div className="node node--soap">SOAP · Perukai</div>

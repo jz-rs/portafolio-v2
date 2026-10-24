@@ -1,7 +1,8 @@
-import { perfil } from "../data/content.js";
+import { useLang } from "../i18n.jsx";
 import FishIcon from "./FishIcon.jsx";
 
 export default function Hero() {
+  const { perfil, ui } = useLang().c;
   // Primera palabra del título en una línea y el resto, resaltado, en la siguiente.
   const [primera, ...resto] = perfil.titulo.split(" ");
 
@@ -16,8 +17,8 @@ export default function Hero() {
         </h1>
         <p className="hero__lead">{perfil.frase}</p>
         <div className="hero__cta">
-          <a href="#proyecto-final" className="btn">Ver proyectos →</a>
-          <a href="#contacto" className="link">Contacto</a>
+          <a href="#proyecto-final" className="btn">{ui.verProyectos} →</a>
+          <a href="#contacto" className="link">{ui.nav.contacto}</a>
         </div>
         <ul className="hero__facts">
           <li>

@@ -1,9 +1,11 @@
-import { cursos } from "../data/content.js";
+import { useLang } from "../i18n.jsx";
 
 export default function Cursos() {
+  const { cursos, ui } = useLang().c;
+
   return (
     <section id="cursos" className="section">
-      <h2 className="section__title"><span className="pill">Cursos</span></h2>
+      <h2 className="section__title"><span className="pill">{ui.secciones.cursos}</span></h2>
       <div className="cards cards--3">
         {cursos.map((c) => (
           <article key={c.nombre} className="card curso">

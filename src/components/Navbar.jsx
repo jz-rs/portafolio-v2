@@ -1,23 +1,25 @@
 import { useState } from "react";
-import { perfil } from "../data/content.js";
+import { useLang } from "../i18n.jsx";
 import FishIcon from "./FishIcon.jsx";
 
 const links = [
-  ["Experiencia", "#experiencia"],
-  ["Formación", "#formacion"],
-  ["Proyecto final", "#proyecto-final"],
-  ["Proyectos", "#proyectos"],
-  ["Cursos", "#cursos"],
-  ["Voluntariados", "#voluntariados"],
+  ["experiencia", "#experiencia"],
+  ["formacion", "#formacion"],
+  ["proyectoFinal", "#proyecto-final"],
+  ["proyectos", "#proyectos"],
+  ["cursos", "#cursos"],
+  ["voluntariados", "#voluntariados"],
 ];
 
 export default function Navbar() {
+  const { lang, setLang, c } = useLang();
+  const { perfil, ui } = c;
   const [abierto, setAbierto] = useState(false);
   const cerrar = () => setAbierto(false);
 
   return (
     <header className={`nav${abierto ? " is-open" : ""}`}>
-      <a href="#inicio" className="nav__brand" aria-label="Ir al inicio" onClick={cerrar}>
+      <a href="#inicio" className="nav__brand" aria-label={ui.nav.inicio} onClick={cerrar}>
         <span className="nav__star"><FishIcon size={34} /></span>
         <span>
           {perfil.nombre.split(" ")[0].toUpperCase()}
@@ -25,19 +27,32 @@ export default function Navbar() {
           {perfil.nombre.split(" ")[1].toUpperCase()}
         </span>
       </a>
-      <nav id="nav-links" className="nav__links" aria-label="Secciones">
-        {links.map(([t, h]) => (
-          <a key={h} href={h} onClick={cerrar}>{t}</a>
+      <nav id="nav-links" className="nav__links" aria-label={ui.nav.secciones}>
+        {links.map(([clave, h]) => (
+          <a key={h} href={h} onClick={cerrar}>{ui.nav[clave]}</a>
         ))}
       </nav>
       <div className="nav__actions">
-        <a href="#contacto" className="btn btn--pill" onClick={cerrar}>Contacto →</a>
+        <div className="lang" role="group" aria-label={ui.nav.idioma}>
+          {["es", "en"].map((l) => (
+            <button
+              key={l}
+              type="button"
+              className={lang === l ? "is-active" : ""}
+              aria-pressed={lang === l}
+              onClick={() => setLang(l)}
+            >
+              {l.toUpperCase()}
+            </button>
+          ))}
+        </div>
+        <a href="#contacto" className="btn btn--pill" onClick={cerrar}>{ui.nav.contacto} →</a>
         <button
           type="button"
           className="nav__toggle"
           aria-expanded={abierto}
           aria-controls="nav-links"
-          aria-label={abierto ? "Cerrar menú" : "Abrir menú"}
+          aria-label={abierto ? ui.nav.cerrarMenu : ui.nav.abrirMenu}
           onClick={() => setAbierto(!abierto)}
         >
           <span aria-hidden="true">{abierto ? "✕" : "☰"}</span>

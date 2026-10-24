@@ -1,11 +1,12 @@
-// Todo el contenido del sitio vive acá.
+// Contenido del sitio en español. La versión en inglés está en content.en.js:
+// todo cambio que se haga acá tiene que hacerse también allá.
 // Lo que dice [COMPLETAR] es información que falta definir; no se inventó nada.
 
 const GH = "https://github.com/jz-rs";
 
 export const perfil = {
   nombre: "Jezabel Rosso",
-  titulo: "Ingeniera informática",
+  titulo: "Ingeniería Informática",
   frase:
     "Diseño y desarrollo soluciones de software de punta a punta, con foco en la calidad, la claridad y el impacto en el negocio.",
   ubicacion: "Córdoba, Argentina",
@@ -192,19 +193,21 @@ export const formacion = [
   {
     titulo: "Ingeniería Informática",
     institucion: "Universidad Blas Pascal — Córdoba",
-    periodo: "Cursado: Marzo 2021 — Noviembre 2025 · Graduada en Octubre 2026",
+    hitos: [
+      { anio: "2021", texto: "Marzo · Inicio del cursado" },
+      { anio: "2025", texto: "Noviembre · Fin del cursado" },
+      { anio: "2026", texto: "Octubre · Graduada" },
+    ],
     estado: "Graduada",
     descripcion:
       "Formación con enfoque práctico en desarrollo de software (incluidos IA y sistemas distribuidos), infraestructura de redes, calidad bajo estándares internacionales y gestión de proyectos.",
   },
 ];
 
-// `en` es el nombre en inglés, para cuando el sitio tenga versión en inglés.
 export const cursos = [
   {
     area: "Desarrollo",
     nombre: "Curso Introductorio de Python",
-    en: "Python Programming",
     institucion: "IEEE Student Chapter ITBA",
     fecha: "Mayo 2022",
     descripcion: "Fundamentos de programación en Python.",
@@ -212,7 +215,6 @@ export const cursos = [
   {
     area: "Desarrollo",
     nombre: "Introducción al Desarrollo Frontend con React",
-    en: "Introduction to Frontend Development with React",
     institucion: "UTN Facultad Regional Córdoba",
     fecha: "Diciembre 2023",
     descripcion: "Componentes, estado, APIs y despliegue.",
@@ -220,7 +222,6 @@ export const cursos = [
   {
     area: "Desarrollo",
     nombre: "Introducción al Desarrollo Backend con Node.js",
-    en: "Introduction to Backend Development with Node.js",
     institucion: "UTN Facultad Regional Córdoba",
     fecha: "Agosto 2023",
     descripcion: "APIs REST con Express, MongoDB y JWT.",
@@ -228,7 +229,6 @@ export const cursos = [
   {
     area: "Datos",
     nombre: "SQL Interactivo",
-    en: "SQL",
     institucion: "Desafío Latam",
     fecha: "Febrero 2024",
     descripcion: "Consultas, agregaciones y modelo relacional.",
@@ -236,7 +236,6 @@ export const cursos = [
   {
     area: "Datos",
     nombre: "Analítica de Datos",
-    en: "Data Analytics",
     institucion: "Universidad Blas Pascal",
     fecha: "Julio 2024",
     descripcion: "Análisis de datos con Excel y Power BI.",
@@ -244,7 +243,6 @@ export const cursos = [
   {
     area: "QA y testing",
     nombre: "Programa XAcademy QA",
-    en: "QA & Testing Program – Santex",
     institucion: "Santex",
     fecha: "Diciembre 2025",
     descripcion: "Testing manual, defectos y accesibilidad.",
@@ -252,7 +250,6 @@ export const cursos = [
   {
     area: "Ciberseguridad",
     nombre: "Taller de Ciberseguridad",
-    en: "Cybersecurity Workshop",
     institucion: "Ecosistema Tech by Desafío Latam",
     fecha: "Marzo 2024",
     descripcion: "Amenazas comunes y buenas prácticas.",
@@ -260,7 +257,6 @@ export const cursos = [
   {
     area: "Industria 4.0",
     nombre: "Automation Training",
-    en: "Automation Training",
     institucion: "Ingelearn",
     fecha: "Febrero 2024",
     descripcion: "Fundamentos de automatización de procesos.",
@@ -268,7 +264,6 @@ export const cursos = [
   {
     area: "Industria 4.0",
     nombre: "Industria 4.0: IIoT, Python y Ciberseguridad industrial",
-    en: "Industry 4.0 – IIoT, Python and Industrial Cybersecurity",
     institucion: "Ingelearn",
     fecha: "Abril 2024",
     descripcion: "IIoT, Python y seguridad en entornos OT.",
@@ -276,7 +271,6 @@ export const cursos = [
   {
     area: "Industria 4.0",
     nombre: "Proyecto de Automatización Industria 4.0: PLC, Node-RED y aplicaciones en Python",
-    en: "Industry 4.0 Automation Project – PLC, Node-RED and Python Applications",
     institucion: "Ingelearn",
     fecha: "Marzo 2026",
     descripcion: "Automatización con PLC, Node-RED y Python.",
@@ -289,4 +283,39 @@ export const contacto = {
   email: "jezabel.rosso.it@gmail.com",
   github: GH,
   linkedin: "https://www.linkedin.com/in/jezabel-rosso/",
+};
+
+// Textos fijos de la interfaz (menú, botones, títulos de sección).
+export const ui = {
+  nav: {
+    experiencia: "Experiencia",
+    formacion: "Formación",
+    proyectoFinal: "Proyecto final",
+    proyectos: "Proyectos",
+    cursos: "Cursos",
+    voluntariados: "Voluntariados",
+    contacto: "Contacto",
+    inicio: "Ir al inicio",
+    secciones: "Secciones",
+    abrirMenu: "Abrir menú",
+    cerrarMenu: "Cerrar menú",
+    idioma: "Idioma",
+  },
+  secciones: {
+    experiencia: "Experiencia laboral",
+    formacion: "Formación",
+    proyectoFinal: "Proyecto final",
+    proyectos: "Proyectos destacados",
+    cursos: "Cursos",
+    voluntariados: "Voluntariados",
+  },
+  verProyectos: "Ver proyectos",
+  actual: "Actual",
+  verGithub: "Ver en GitHub",
+  verRepo: "Ver repositorio",
+  diagrama: "Arquitectura de Ristorino",
+  contactoTitulo: "Trabajemos juntos",
+  mail: "Mail",
+  volverArriba: "Volver arriba",
+  meta: { title: "Jezabel Rosso — Ingeniería Informática" },
 };

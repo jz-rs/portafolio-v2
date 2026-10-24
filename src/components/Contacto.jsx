@@ -1,19 +1,21 @@
-import { contacto } from "../data/content.js";
+import { useLang } from "../i18n.jsx";
 
 // Mientras un dato diga [COMPLETAR] se muestra como texto, no como link.
 const pendiente = (valor) => valor.startsWith("[COMPLETAR]");
 
 export default function Contacto() {
+  const { contacto, ui } = useLang().c;
+
   return (
     <section id="contacto" className="section">
       <div className="cta">
         <div>
-          <h2>Trabajemos juntos</h2>
+          <h2>{ui.contactoTitulo}</h2>
           <p>{contacto.invitacion}</p>
         </div>
         <ul>
           <li>
-            <strong>Mail</strong>{" "}
+            <strong>{ui.mail}</strong>{" "}
             {pendiente(contacto.email) ? (
               contacto.email
             ) : (

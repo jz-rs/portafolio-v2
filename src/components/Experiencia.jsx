@@ -1,18 +1,20 @@
-import { experiencia } from "../data/content.js";
+import { useLang } from "../i18n.jsx";
 
 export default function Experiencia() {
+  const { experiencia, ui } = useLang().c;
+
   return (
     <section id="experiencia" className="section">
       <div className="dark">
         <h2 className="section__title section__title--light">
-          <span className="pill pill--dark">Experiencia laboral</span>
+          <span className="pill pill--dark">{ui.secciones.experiencia}</span>
         </h2>
         <ol className="timeline">
           {experiencia.map((e) => (
             <li key={e.empresa} className={e.actual ? "is-current" : ""}>
               <div className="timeline__head">
                 <h3>{e.empresa}</h3>
-                {e.actual && <span className="badge">Actual</span>}
+                {e.actual && <span className="badge">{ui.actual}</span>}
               </div>
               <p className="timeline__meta">
                 {e.rol} · {e.periodo}

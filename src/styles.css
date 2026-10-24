@@ -49,6 +49,14 @@ main, .nav, .footer { width: min(1180px, calc(100% - 32px)); margin-inline: auto
 .nav__links a { text-decoration: none; opacity: .85; }
 .nav__links a:hover { opacity: 1; color: var(--accent-on-dark); }
 .nav__actions { display: flex; align-items: center; gap: 10px; }
+.lang { display: flex; padding: 3px; border: 1px solid #ffffff40; border-radius: 999px; }
+.lang button {
+  padding: 6px 10px; border: 0; border-radius: 999px; cursor: pointer;
+  background: transparent; color: var(--cream); opacity: .75;
+  font: 700 11px/1 var(--font-body); letter-spacing: .08em;
+}
+.lang button:hover { opacity: 1; }
+.lang button.is-active { background: var(--accent-on-dark); color: var(--ink); opacity: 1; }
 .nav__toggle {
   display: none; width: 40px; height: 40px; padding: 0; cursor: pointer;
   background: transparent; color: var(--cream); border: 1px solid #ffffff40; border-radius: 12px;
@@ -163,11 +171,36 @@ main, .nav, .footer { width: min(1180px, calc(100% - 32px)); margin-inline: auto
 .card p.card__rol { margin: 0 0 4px; font-weight: 600; color: var(--ink); }
 .card .chips { margin-bottom: 0; }
 .edu-list { display: grid; gap: 20px; }
-.edu { background: var(--terra); border-color: var(--terra); color: #fff; }
-.edu h3 { font-size: 1.4rem; }
-.edu p.card__rol { color: #fff; }
-.edu .card__meta { color: var(--accent-on-dark); }
-.edu p { color: #f6e9ec; }
+.edu {
+  position: relative; overflow: hidden;
+  display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; align-items: center;
+  padding: 44px; border-radius: 28px; background: var(--terra); color: #fff;
+}
+.edu::after {
+  content: ""; position: absolute; right: -90px; top: -90px; width: 260px; height: 260px;
+  border-radius: 50%; background: #ffffff0d; pointer-events: none;
+}
+.edu__inst {
+  display: inline-flex; align-items: center; gap: 8px; margin: 0 0 14px;
+  font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-on-dark);
+}
+.edu__inst svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round; flex-shrink: 0; }
+.edu__title { margin: 0 0 16px; font-weight: 900; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.02; text-transform: uppercase; }
+.edu__badge {
+  display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px 5px 8px; border-radius: 999px;
+  background: var(--accent-on-dark); color: var(--ink); font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+}
+.edu__badge svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.edu__desc { margin: 18px 0 0; max-width: 560px; color: #f6e9ec; }
+.edu__hitos { position: relative; z-index: 1; list-style: none; margin: 0; padding: 0 0 0 24px; border-left: 2px solid #ffffff33; display: grid; gap: 22px; }
+.edu__hitos li { position: relative; display: grid; gap: 2px; }
+.edu__hitos li::before {
+  content: ""; position: absolute; left: -32px; top: 5px; width: 12px; height: 12px; border-radius: 50%;
+  background: var(--terra); border: 2px solid var(--accent-on-dark);
+}
+.edu__hitos li:last-child::before { background: var(--accent-on-dark); }
+.edu__anio { font-family: var(--font-display); font-weight: 900; font-size: 1.6rem; line-height: 1; }
+.edu__hito { font-size: 13px; font-weight: 600; color: #f6e9ec; }
 .curso { display: flex; flex-direction: column; }
 .curso__area { align-self: flex-start; margin-bottom: 12px; padding: 4px 10px; border-radius: 999px; background: var(--sand); border: 1px solid var(--line); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--terra-d); }
 .card p.curso__inst { margin: 0 0 4px; font-weight: 600; color: var(--ink); }
@@ -197,6 +230,7 @@ main, .nav, .footer { width: min(1180px, calc(100% - 32px)); margin-inline: auto
   .hero, .band, .cta { grid-template-columns: 1fr; }
   .hero { padding-top: 40px; }
   .band, .dark, .cta { padding: 28px 22px; }
+  .edu { grid-template-columns: 1fr; gap: 28px; padding: 28px 22px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

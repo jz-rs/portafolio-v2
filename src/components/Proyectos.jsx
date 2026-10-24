@@ -1,9 +1,11 @@
-import { proyectos } from "../data/content.js";
+import { useLang } from "../i18n.jsx";
 
 export default function Proyectos() {
+  const { proyectos, ui } = useLang().c;
+
   return (
     <section id="proyectos" className="section">
-      <h2 className="section__title"><span className="pill">Proyectos destacados</span></h2>
+      <h2 className="section__title"><span className="pill">{ui.secciones.proyectos}</span></h2>
       <div className="grid">
         {proyectos.map((p) => (
           <article key={p.archivo} className="win">
@@ -20,7 +22,7 @@ export default function Proyectos() {
                 ))}
               </div>
               <a className="link" href={p.link} target="_blank" rel="noreferrer">
-                Ver repositorio →
+                {ui.verRepo} →
               </a>
             </div>
           </article>
