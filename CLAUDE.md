@@ -38,6 +38,8 @@ Repositorio: https://github.com/jz-rs/portafolio-v2 (rama `main`). Subir cambios
 - La tarjeta de Formación va en color vino (`--terra`) con letras blancas, como los colores de la UBP. A la izquierda: la universidad como etiqueta chica en rosado (con ícono de birrete), la carrera grande (Archivo 900 en mayúsculas), la etiqueta "Graduada" con ✓ y la descripción. A la derecha, una línea de tiempo con los hitos (año grande + mes y qué pasó). En celular se apila.
 - Contraste: el texto chico necesita al menos 4,5:1. Nunca bordó sobre fondo oscuro: ahí va el rosado (hover del menú, puntos de la línea de tiempo, etiqueta "Actual", contorno de foco). Sobre el verde oliva el contorno de foco es crema.
 - Tiene que verse bien en celular, sin scroll horizontal: las grillas usan `minmax(min(Npx, 100%), 1fr)`. Debajo de 900px la barra muestra un menú desplegable (botón ☰).
+- Debajo de 600px hay una versión compacta: la barra entra en una sola fila (el botón Contacto pasa al menú), el dibujo de la portada se achica, los hitos de Formación van en fila, el diagrama de Ristorino va en dos columnas y las tarjetas tienen menos relleno.
+- Para revisar el celular: emular un dispositivo de 390px (las capturas de Chrome sin ventana con `--window-size` chico no sirven, porque Chrome fuerza un ancho mínimo y todo se ve cortado).
 
 ## Estructura de la página
 1. Portada · 2. Experiencia laboral · 3. Formación · 4. Proyecto final (Ristorino) · 5. Proyectos destacados · 6. Cursos · 7. Voluntariados · 8. Contacto

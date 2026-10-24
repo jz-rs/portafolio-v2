@@ -31,6 +31,7 @@ export default function Navbar() {
         {links.map(([clave, h]) => (
           <a key={h} href={h} onClick={cerrar}>{ui.nav[clave]}</a>
         ))}
+        <a href="#contacto" className="nav__solo-movil" onClick={cerrar}>{ui.nav.contacto}</a>
       </nav>
       <div className="nav__actions">
         <div className="lang" role="group" aria-label={ui.nav.idioma}>

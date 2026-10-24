@@ -48,6 +48,7 @@ main, .nav, .footer { width: min(1180px, calc(100% - 32px)); margin-inline: auto
 .nav__links { display: flex; gap: 22px; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
 .nav__links a { text-decoration: none; opacity: .85; }
 .nav__links a:hover { opacity: 1; color: var(--accent-on-dark); }
+.nav__links .nav__solo-movil { display: none; }
 .nav__actions { display: flex; align-items: center; gap: 10px; }
 .lang { display: flex; padding: 3px; border: 1px solid #ffffff40; border-radius: 999px; }
 .lang button {
@@ -231,6 +232,55 @@ main, .nav, .footer { width: min(1180px, calc(100% - 32px)); margin-inline: auto
   .hero { padding-top: 40px; }
   .band, .dark, .cta { padding: 28px 22px; }
   .edu { grid-template-columns: 1fr; gap: 28px; padding: 28px 22px; }
+}
+/* Celulares: versión compacta */
+@media (max-width: 600px) {
+  .section { padding: 20px 0; }
+
+  /* Barra en una sola fila: pez y nombre más chicos, sin el botón Contacto (pasa al menú) */
+  .nav { padding: 10px 10px 10px 14px; border-radius: 16px; gap: 10px; }
+  .nav__brand { gap: 8px; font-size: 12px; }
+  .nav__star svg { height: 26px; width: auto; }
+  .nav__actions { gap: 8px; }
+  .nav__actions .btn--pill { display: none; }
+  .nav.is-open .nav__links .nav__solo-movil { display: block; }
+  .lang button { padding: 6px 8px; }
+  .nav__toggle { width: 36px; height: 36px; }
+
+  /* Portada: el dibujo deja de ocupar toda la pantalla */
+  .hero { padding: 28px 0 8px; gap: 20px; }
+  .hero__art { max-width: 220px; }
+  .hero__facts { gap: 10px 18px; margin-top: 22px; }
+
+  /* Experiencia */
+  .dark { padding: 24px 18px; }
+  .timeline { padding-left: 22px; gap: 26px; }
+  .timeline > li::before { left: -29px; }
+  .timeline h3 { font-size: 1.25rem; }
+
+  /* Formación: carrera más chica y los hitos en una fila */
+  .edu { gap: 22px; }
+  .edu::after { display: none; }
+  .edu__title { font-size: 1.75rem; margin-bottom: 12px; }
+  .edu__desc { margin-top: 14px; font-size: .95rem; }
+  .edu__hitos { grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 18px 0 0; border-left: 0; border-top: 2px solid #ffffff33; }
+  .edu__hitos li::before { left: 0; top: -25px; }
+  .edu__anio { font-size: 1.3rem; }
+  .edu__hito { font-size: 12px; line-height: 1.35; }
+
+  /* Ristorino: el diagrama en dos columnas */
+  .band { gap: 22px; }
+  .band__diagram { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .node { padding: 10px 12px; font-size: 12px; border-radius: 12px; }
+  .node--portal { grid-column: 1 / -1; font-size: 14px; }
+
+  /* Proyectos, cursos y voluntariados: tarjetas más compactas */
+  .grid, .cards { gap: 14px; }
+  .win__body { padding: 16px; }
+  .card { padding: 18px; border-radius: 18px; }
+  .curso__area { margin-bottom: 8px; }
+
+  .cta { gap: 18px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
