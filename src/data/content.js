@@ -28,37 +28,31 @@ export const proyectoFinal = {
 
 export const proyectos = [
   {
+    nombre: "Sistema de gestión de clínica",
+    archivo: "sistema-gestion-clinica",
+    descripcion: "Sistema de gestión para una clínica, con diseño orientado a objetos.",
+    stack: ["Java", "JavaFX", "SQLite", "Maven"],
+  },
+  {
+    nombre: "PhotoLab Express",
+    archivo: "photolab-express",
+    descripcion:
+      "App en Python y Streamlit que procesa lotes de fotos: aplica filtros, detecta rostros y clasifica cada imagen con IA (CLIP), con procesamiento paralelo y caché.",
+    stack: ["Python", "Streamlit", "OpenCV", "CLIP", "pytest"],
+  },
+  {
     nombre: "Casos de negocio en SQL",
     archivo: "sql-casos-de-negocio",
     descripcion:
       "Tres casos resueltos con SQL Server: migración de un modelo de datos, triggers y procedimientos almacenados, y diseño de una base de datos.",
-    stack: ["T-SQL", "SQL Server"],
+    stack: ["SQL Server", "T-SQL", "Modelo relacional"],
   },
   {
     nombre: "Tablero de control OEE",
     archivo: "tablero-control-oee",
     descripcion:
       "Tablero web para seguir la eficiencia de producción (OEE) con datos por período.",
-    stack: ["JavaScript", "HTML", "CSS"],
-  },
-  {
-    nombre: "PhotoLab Express",
-    archivo: "photolab-express",
-    descripcion: "Aplicación web de procesamiento de imágenes.",
-    stack: ["Python", "Streamlit"],
-  },
-  {
-    nombre: "Sistema de gestión de clínica",
-    archivo: "sistema-gestion-clinica",
-    descripcion: "Sistema de gestión para una clínica, con diseño orientado a objetos.",
-    stack: ["Java", "POO"],
-  },
-  {
-    nombre: "Criptografía y compresión",
-    archivo: "criptografia-y-compresion-cpp",
-    descripcion:
-      "Aplicación de consola con búsqueda de patrones, cifrados clásicos y compresión (Huffman y LZW).",
-    stack: ["C++"],
+    stack: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Chart.js"],
   },
   {
     nombre: "Red de Hopfield",
@@ -72,6 +66,13 @@ export const proyectos = [
     descripcion:
       "Árboles de decisión y K-means aplicados a datos reales, con métricas y análisis de resultados.",
     stack: ["WEKA", "Machine learning"],
+  },
+  {
+    nombre: "Criptografía y compresión",
+    archivo: "criptografia-y-compresion-cpp",
+    descripcion:
+      "Aplicación de consola con búsqueda de patrones, cifrados clásicos y compresión (Huffman y LZW).",
+    stack: ["C++", "Consola Windows", "Cifrado", "Compresión", "Búsqueda"],
   },
 ].map((p) => ({ ...p, link: `${GH}/${p.archivo}` }));
 
@@ -174,10 +175,88 @@ export const voluntariados = [
   },
 ];
 
+// `en` es el nombre en inglés, para cuando el sitio tenga versión en inglés.
 export const cursos = [
-  { area: "Programación", items: ["Python", "Frontend con React", "Backend con Node.js"] },
-  { area: "Datos", items: ["SQL", "Data Analytics"] },
-  { area: "Calidad e industria", items: ["QA y Testing", "Automation Training", "Industry 4.0"] },
+  {
+    area: "Desarrollo",
+    nombre: "Curso Introductorio de Python",
+    en: "Python Programming",
+    institucion: "IEEE Student Chapter ITBA",
+    fecha: "Mayo 2022",
+    descripcion: "Fundamentos de programación en Python.",
+  },
+  {
+    area: "Desarrollo",
+    nombre: "Introducción al Desarrollo Frontend con React",
+    en: "Introduction to Frontend Development with React",
+    institucion: "UTN Facultad Regional Córdoba",
+    fecha: "Diciembre 2023",
+    descripcion: "Componentes, estado, APIs y despliegue.",
+  },
+  {
+    area: "Desarrollo",
+    nombre: "Introducción al Desarrollo Backend con Node.js",
+    en: "Introduction to Backend Development with Node.js",
+    institucion: "UTN Facultad Regional Córdoba",
+    fecha: "Agosto 2023",
+    descripcion: "APIs REST con Express, MongoDB y JWT.",
+  },
+  {
+    area: "Datos",
+    nombre: "SQL Interactivo",
+    en: "SQL",
+    institucion: "Desafío Latam",
+    fecha: "Febrero 2024",
+    descripcion: "Consultas, agregaciones y modelo relacional.",
+  },
+  {
+    area: "Datos",
+    nombre: "Analítica de Datos",
+    en: "Data Analytics",
+    institucion: "Universidad Blas Pascal",
+    fecha: "Julio 2024",
+    descripcion: "Análisis de datos con Excel y Power BI.",
+  },
+  {
+    area: "QA y testing",
+    nombre: "Programa XAcademy QA",
+    en: "QA & Testing Program – Santex",
+    institucion: "Santex",
+    fecha: "Diciembre 2025",
+    descripcion: "Testing manual, defectos y accesibilidad.",
+  },
+  {
+    area: "Ciberseguridad",
+    nombre: "Taller de Ciberseguridad",
+    en: "Cybersecurity Workshop",
+    institucion: "Ecosistema Tech by Desafío Latam",
+    fecha: "Marzo 2024",
+    descripcion: "Amenazas comunes y buenas prácticas.",
+  },
+  {
+    area: "Industria 4.0",
+    nombre: "Automation Training",
+    en: "Automation Training",
+    institucion: "Ingelearn",
+    fecha: "Febrero 2024",
+    descripcion: "Fundamentos de automatización de procesos.",
+  },
+  {
+    area: "Industria 4.0",
+    nombre: "Industria 4.0: IIoT, Python y Ciberseguridad industrial",
+    en: "Industry 4.0 – IIoT, Python and Industrial Cybersecurity",
+    institucion: "Ingelearn",
+    fecha: "Abril 2024",
+    descripcion: "IIoT, Python y seguridad en entornos OT.",
+  },
+  {
+    area: "Industria 4.0",
+    nombre: "Proyecto de Automatización Industria 4.0: PLC, Node-RED y aplicaciones en Python",
+    en: "Industry 4.0 Automation Project – PLC, Node-RED and Python Applications",
+    institucion: "Ingelearn",
+    fecha: "Marzo 2026",
+    descripcion: "Automatización con PLC, Node-RED y Python.",
+  },
 ];
 
 export const contacto = {
