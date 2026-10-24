@@ -78,26 +78,86 @@ export const proyectos = [
 export const experiencia = [
   {
     empresa: "S-interio",
-    rol: "[COMPLETAR] Cargo",
-    periodo: "[COMPLETAR] Desde — Actualidad",
+    rol: "Backend Engineer",
+    periodo: "Marzo 2026 — Actualidad",
     actual: true,
     descripcion:
-      "Integración, desarrollo y testing de soluciones para infraestructura de pagos en Latinoamérica.",
+      "Trabajo en el área de integraciones técnicas de pagos de S-interio, una empresa fintech que opera en Latinoamérica. Desarrollo integraciones con proveedores de pago, varias de ellas hoy en producción y trabajadas junto a mi equipo, y participo en el desarrollo de herramientas internas que usan distintas áreas de la empresa. Mi trabajo se apoya en un análisis técnico profundo de APIs, requests y logs, que me permite resolver incidencias de Payin y Payout y coordinar con merchants, proveedores y equipos internos.",
+    detalle: [
+      {
+        titulo: "Lo que desarrollé",
+        items: [
+          "Automatización para el testeo de pagos, tanto de Payin como de Payout.",
+          "Extensión de Chrome para la empresa, con una división por área.",
+          "Documentación técnica de nuestra API de Payin.",
+          "Sistema de tickets interno, desarrollado en conjunto con mi líder.",
+          "Herramienta para que el área de Sales pruebe las soluciones y grabe demos comerciales, desarrollada en conjunto con mi líder.",
+          "Colaboración en el desarrollo del programa de Finanzas para el settlement de la empresa.",
+          "Guías para otras áreas sobre qué pasa cuando se corta un método de pago en un país, y sobre el uso de Keeper.",
+        ],
+      },
+      {
+        titulo: "Capacitación",
+        items: [
+          "Capacité a compañeros de mi área y a todas las áreas de la empresa en el uso del sistema de tickets.",
+        ],
+      },
+    ],
+    stack: [
+      "TypeScript", "JavaScript", "Python", "SQL", "Node.js", "Fastify", "React", "Next.js",
+      "PostgreSQL", "Redis", "Prisma", "Docker", "Vercel", "SDK de Anthropic (Claude)", "MCP",
+      "Chrome Extensions", "Docusaurus", "Postman", "Testing manual",
+    ],
   },
   {
     empresa: "ODS Córdoba",
-    rol: "[COMPLETAR] Cargo",
-    periodo: "[COMPLETAR] Período",
+    organizacion:
+      "Proyecto de investigación de la Universidad Blas Pascal (UBP), en colaboración con la Universidad Libre del Ambiente (ULA)",
+    rol: "Analista de Datos y Desarrolladora Web",
+    periodo: "Abril 2026 — Actualidad",
+    actual: true,
     descripcion:
-      "Plataforma web que acerca los Objetivos de Desarrollo Sostenible a la ciudad: observatorio con encuesta ciudadana y mapa colaborativo de reportes en tiempo real.",
-    link: "https://ods-cordoba.vercel.app",
+      "Integro el equipo del observatorio, que analiza y sigue los Objetivos de Desarrollo Sostenible en Córdoba. Recopilamos, organizamos y visualizamos información para entender realidades sociales, ambientales y territoriales de la ciudad.",
+    detalle: [
+      {
+        titulo: "Análisis de datos",
+        items: [
+          "Procesamiento y organización de indicadores de desarrollo sostenible por zona geográfica.",
+          "Preparación de los datos para matrices comparativas y visualización de resultados.",
+        ],
+      },
+      {
+        titulo: "Desarrollo web",
+        items: [
+          "Desarrollo y actualización de la plataforma del observatorio, para presentar la información de forma clara y accesible.",
+          "Encuesta ciudadana y mapa colaborativo de reportes en tiempo real, con datos de infraestructura de la ciudad.",
+          "Frontend y rutas API en Next.js, con las encuestas y los reportes guardados en PostgreSQL.",
+        ],
+      },
+    ],
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Leaflet", "OpenStreetMap", "PostgreSQL (Neon)", "Vercel"],
+    link: "https://odscordoba.com",
     linkTexto: "Ver sitio en vivo",
   },
   {
     empresa: "Eclypsium",
-    rol: "[COMPLETAR] Cargo",
-    periodo: "[COMPLETAR] Período",
-    descripcion: "[COMPLETAR] Qué hacías.",
+    rol: "Pasante en Desarrollo de Plugins de Seguridad",
+    periodo: "Agosto 2025 — Octubre 2025",
+    descripcion:
+      "Trabajé en el área de Ingeniería, en el desarrollo y la mejora del motor Abram Linter. Todo lo que desarrollé se integró al repositorio principal del proyecto.",
+    detalle: [
+      {
+        titulo: "Lo que desarrollé",
+        items: [
+          "Nuevos checkers y validaciones en Python.",
+          "Flags en la CLI (--only, --exclude) para ejecutar análisis de forma selectiva.",
+          "Correcciones en configuraciones de LFS y .gitattributes.",
+          "Frontend web básico con FastAPI, que consume la API REST del backend para CyberChef.",
+          "Pruebas automatizadas con PyTest para asegurar la calidad y estabilidad del sistema.",
+        ],
+      },
+    ],
+    stack: ["Python", "FastAPI", "PyTest", "API REST", "Git", "Git LFS", "CyberChef"],
   },
 ];
 

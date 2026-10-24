@@ -3,11 +3,11 @@ import { perfil } from "../data/content.js";
 import FishIcon from "./FishIcon.jsx";
 
 const links = [
+  ["Experiencia", "#experiencia"],
   ["Proyecto final", "#proyecto-final"],
   ["Proyectos", "#proyectos"],
-  ["Experiencia", "#experiencia"],
-  ["Voluntariados", "#voluntariados"],
   ["Cursos", "#cursos"],
+  ["Voluntariados", "#voluntariados"],
 ];
 
 export default function Navbar() {

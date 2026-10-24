@@ -14,10 +14,28 @@ export default function Experiencia() {
                 <h3>{e.empresa}</h3>
                 {e.actual && <span className="badge">Actual</span>}
               </div>
+              {e.organizacion && <p className="timeline__org">{e.organizacion}</p>}
               <p className="timeline__meta">
                 {e.rol} · {e.periodo}
               </p>
               <p>{e.descripcion}</p>
+              {e.detalle?.map((g) => (
+                <div key={g.titulo} className="timeline__group">
+                  <h4>{g.titulo}</h4>
+                  <ul>
+                    {g.items.map((i) => (
+                      <li key={i}>{i}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+              {e.stack && (
+                <div className="chips chips--light">
+                  {e.stack.map((s) => (
+                    <span key={s}>{s}</span>
+                  ))}
+                </div>
+              )}
               {e.link && (
                 <a className="link link--light" href={e.link} target="_blank" rel="noreferrer">
                   {e.linkTexto} →

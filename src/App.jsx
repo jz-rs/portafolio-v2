@@ -14,11 +14,11 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Experiencia />
         <ProyectoFinal />
         <Proyectos />
-        <Experiencia />
-        <Voluntariados />
         <Cursos />
+        <Voluntariados />
         <Contacto />
       </main>
       <Footer />
