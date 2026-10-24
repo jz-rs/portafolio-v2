@@ -1,18 +1,22 @@
 import { perfil } from "../data/content.js";
+import FishIcon from "./FishIcon.jsx";
 
 export default function Hero() {
+  // Primera palabra del título en una línea y el resto, resaltado, en la siguiente.
+  const [primera, ...resto] = perfil.titulo.split(" ");
+
   return (
     <section id="inicio" className="hero">
       <div className="hero__text">
-        <span className="tag">✦ {perfil.titulo}</span>
+        <span className="tag tag--icon"><FishIcon size={16} /> {perfil.titulo}</span>
         <h1>
-          <span>{perfil.titulo.split(" ")[0]}</span>
-          <span className="accent">{perfil.titulo.split(" ")[1]}</span>
+          <span>{primera}</span>
+          {resto.length > 0 && <span className="accent">{resto.join(" ")}</span>}
           <span>{perfil.nombre}</span>
         </h1>
         <p className="hero__lead">{perfil.frase}</p>
         <div className="hero__cta">
-          <a href="#proyectos" className="btn">Ver proyectos →</a>
+          <a href="#proyecto-final" className="btn">Ver proyectos →</a>
           <a href="#contacto" className="link">Contacto</a>
         </div>
         <ul className="hero__facts">

@@ -121,6 +121,7 @@ export const cursos = [
 ];
 
 export const contacto = {
+  invitacion: "[COMPLETAR] Una línea invitando a escribirte.",
   email: "[COMPLETAR] Mail de contacto",
   github: GH,
   linkedin: "[COMPLETAR] URL de LinkedIn",
