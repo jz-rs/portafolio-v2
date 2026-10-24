@@ -8,6 +8,8 @@ Comandos: `npm install`, `npm run dev` (desarrollo, en http://localhost:5173), `
 
 Repositorio: https://github.com/jz-rs/portafolio-v2 (rama `main`). Subir cambios solo cuando ella lo pida.
 
+Sitio publicado: https://portafolio-v2-cyan.vercel.app (proyecto `portafolio-v2` en Vercel, conectado al repo: cada push a `main` se publica solo en uno o dos minutos). Ojo: https://portafolio-v2.vercel.app es de otra persona, no es este sitio.
+
 ## Reglas
 - No inventar contenido: lo que falta se deja como `[COMPLETAR]`. Si un dato no se conoce (por ejemplo, el año), se deja así y se pregunta.
 - No cambiar contenido ni código que no se pidió. Si ves algo para mejorar, avisar antes de tocarlo.
@@ -65,4 +67,3 @@ Ya completos: versión en inglés, Experiencia (S-interio, ODS Córdoba y Eclyps
 
 ## Ideas propuestas (sin hacer)
 - Sección "Herramientas" con la lista completa de tecnologías del trabajo, agrupada por categoría, entre Proyectos y Cursos.
-- Configurar el deploy (Vercel, GitHub Pages u otro).
