@@ -3,6 +3,7 @@
 // Lo que dice [COMPLETAR] es información que falta definir; no se inventó nada.
 
 const GH = "https://github.com/jz-rs";
+const MEDIA = "/media/galeria";
 
 export const perfil = {
   nombre: "Jezabel Rosso",
@@ -10,6 +11,7 @@ export const perfil = {
   frase:
     "Diseño y desarrollo soluciones de software de punta a punta, con foco en la calidad, la claridad y el impacto en el negocio.",
   ubicacion: "Córdoba, Argentina",
+  fotoAlt: "Foto de Jezabel Rosso",
   disponibilidad: "Siempre abierta a escuchar propuestas",
 };
 
@@ -170,6 +172,9 @@ export const voluntariados = [
     rol: "Marketing, comunicación, diseño y prensa",
     periodo: "Julio 2026 — Actualidad",
     actual: true,
+    destacado: true,
+    link: "https://youtu.be/U19i2LFYMh4",
+    linkTexto: "Ver la charla",
     descripcion:
       "Formo parte del equipo organizador: creo y difundo contenido para redes y comunico las actividades del evento. Además, fui speaker en las capacitaciones previas a la hackathon con la charla “Road to Next: Construye con lo que tienes” (ciclo Next is You, junto a TechSpira).",
   },
@@ -187,6 +192,21 @@ export const voluntariados = [
     descripcion:
       "Voluntariado en apoyo logístico durante las Olimpíadas. Preparación y rotulado de alrededor de 150 medallas para las premiaciones (1°, 2° y 3° puesto), contribuyendo al orden y la eficiencia del evento.",
   },
+];
+
+export const galeria = [
+  { tipo: "imagen", src: `${MEDIA}/capacitacion-tickets.webp`, etiqueta: "S-interio", texto: "Capacitación sobre el sistema de tickets interno." },
+  { tipo: "imagen", src: `${MEDIA}/extension-chrome.webp`, ancho: true, etiqueta: "S-interio", texto: "Extensión de Chrome de la empresa, organizada por área." },
+  { tipo: "imagen", src: `${MEDIA}/github-actividad.webp`, ancho: true, contener: true, etiqueta: "S-interio", texto: "Mi actividad en GitHub con la cuenta de S-interio." },
+  { tipo: "imagen", src: `${MEDIA}/eclypsium-reconocimiento.webp`, etiqueta: "Eclypsium", texto: "Reconocimiento por mi trabajo en Abram QA." },
+  { tipo: "imagen", src: `${MEDIA}/capitalinas.webp`, etiqueta: "Eclypsium", texto: "Capitalinas, el complejo de Córdoba donde trabajaba para Eclypsium." },
+  { tipo: "video", src: `${MEDIA}/metodos-numericos.mp4`, poster: `${MEDIA}/metodos-numericos.webp`, etiqueta: "Formación", texto: "Preparando mi final de Métodos Numéricos." },
+  { tipo: "imagen", src: `${MEDIA}/proyecto-final.webp`, etiqueta: "Ristorino", texto: "Preparando el proyecto final." },
+  { tipo: "video", src: `${MEDIA}/ristorino-flow.mp4`, poster: `${MEDIA}/ristorino-flow.webp`, ancho: true, etiqueta: "Ristorino", texto: "Recorrido por la app." },
+  { tipo: "video", src: `${MEDIA}/photolab-express.mp4`, poster: `${MEDIA}/photolab-express.webp`, ancho: true, etiqueta: "PhotoLab Express", texto: "Recorrido por la app." },
+  { tipo: "imagen", src: `${MEDIA}/nasa-entrevista.webp`, etiqueta: "NASA Space Apps", texto: "Entrevista para sumarme como voluntaria." },
+  { tipo: "imagen", src: `${MEDIA}/nasa-preparacion.webp`, etiqueta: "NASA Space Apps", texto: "Preparando la charla “Road to Next: Construye con lo que tienes”." },
+  { tipo: "video", src: `${MEDIA}/nasa-charla.mp4`, poster: `${MEDIA}/nasa-charla.webp`, ancho: true, etiqueta: "NASA Space Apps", texto: "Resumen de la charla." },
 ];
 
 export const formacion = [
@@ -210,70 +230,60 @@ export const cursos = [
     nombre: "Curso Introductorio de Python",
     institucion: "IEEE Student Chapter ITBA",
     fecha: "Mayo 2022",
-    descripcion: "Fundamentos de programación en Python.",
   },
   {
     area: "Desarrollo",
     nombre: "Introducción al Desarrollo Frontend con React",
     institucion: "UTN Facultad Regional Córdoba",
     fecha: "Diciembre 2023",
-    descripcion: "Componentes, estado, APIs y despliegue.",
   },
   {
     area: "Desarrollo",
     nombre: "Introducción al Desarrollo Backend con Node.js",
     institucion: "UTN Facultad Regional Córdoba",
     fecha: "Agosto 2023",
-    descripcion: "APIs REST con Express, MongoDB y JWT.",
   },
   {
-    area: "Datos",
+    area: "Datos, QA y seguridad",
     nombre: "SQL Interactivo",
     institucion: "Desafío Latam",
     fecha: "Febrero 2024",
-    descripcion: "Consultas, agregaciones y modelo relacional.",
   },
   {
-    area: "Datos",
+    area: "Datos, QA y seguridad",
     nombre: "Analítica de Datos",
     institucion: "Universidad Blas Pascal",
     fecha: "Julio 2024",
-    descripcion: "Análisis de datos con Excel y Power BI.",
   },
   {
-    area: "QA y testing",
+    area: "Datos, QA y seguridad",
     nombre: "Programa XAcademy QA",
     institucion: "Santex",
     fecha: "Diciembre 2025",
-    descripcion: "Testing manual, defectos y accesibilidad.",
   },
   {
-    area: "Ciberseguridad",
+    area: "Datos, QA y seguridad",
     nombre: "Taller de Ciberseguridad",
     institucion: "Ecosistema Tech by Desafío Latam",
     fecha: "Marzo 2024",
-    descripcion: "Amenazas comunes y buenas prácticas.",
   },
   {
     area: "Industria 4.0",
     nombre: "Automation Training",
     institucion: "Ingelearn",
     fecha: "Febrero 2024",
-    descripcion: "Fundamentos de automatización de procesos.",
   },
   {
     area: "Industria 4.0",
     nombre: "Industria 4.0: IIoT, Python y Ciberseguridad industrial",
     institucion: "Ingelearn",
     fecha: "Abril 2024",
-    descripcion: "IIoT, Python y seguridad en entornos OT.",
   },
   {
     area: "Industria 4.0",
     nombre: "Proyecto de Automatización Industria 4.0: PLC, Node-RED y aplicaciones en Python",
     institucion: "Ingelearn",
     fecha: "Marzo 2026",
-    descripcion: "Automatización con PLC, Node-RED y Python.",
   },
 ];
 
@@ -308,6 +318,7 @@ export const ui = {
     proyectos: "Proyectos destacados",
     cursos: "Cursos",
     voluntariados: "Voluntariados",
+    galeria: "Detrás de escena",
   },
   verProyectos: "Ver proyectos",
   actual: "Actual",
@@ -317,5 +328,15 @@ export const ui = {
   contactoTitulo: "Trabajemos juntos",
   mail: "Mail",
   volverArriba: "Volver arriba",
+  galeria: {
+    intro: "Momentos del trabajo, la facultad y los voluntariados. Tocá una imagen para agrandarla.",
+    pausar: "Pausar carrusel",
+    reanudar: "Reanudar carrusel",
+    abrir: "Agrandar",
+    video: "Video",
+    cerrar: "Cerrar",
+    anterior: "Anterior",
+    siguiente: "Siguiente",
+  },
   meta: { title: "Jezabel Rosso — Ingeniería Informática" },
 };

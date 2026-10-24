@@ -34,13 +34,41 @@ export default function Hero() {
           </li>
         </ul>
       </div>
-      <div className="hero__art" aria-hidden="true">
-        <div className="art art--sun" />
-        <div className="art art--moss" />
-        <div className="art art--dark">
-          <span>JR</span>
+      <div className="hero__art">
+        <div className="art art--sun" aria-hidden="true" />
+        <svg className="art art--orbit" viewBox="0 0 200 80" aria-hidden="true">
+          <ellipse cx="100" cy="40" rx="96" ry="34" />
+          <circle cx="22" cy="20" r="4" />
+        </svg>
+        <svg className="art art--burst" viewBox="0 0 100 100" aria-hidden="true">
+          {Array.from({ length: 16 }, (_, i) => (
+            <line key={i} x1="50" y1="50" x2="50" y2={i % 2 ? 14 : 2} transform={`rotate(${i * 22.5} 50 50)`} />
+          ))}
+          <circle cx="50" cy="50" r="5" />
+        </svg>
+        <div className="art art--moss" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <ellipse cx="60" cy="60" rx="52" ry="52" />
+            <ellipse cx="60" cy="60" rx="52" ry="18" />
+            <ellipse cx="60" cy="60" rx="52" ry="36" />
+            <ellipse cx="60" cy="60" rx="18" ry="52" />
+            <ellipse cx="60" cy="60" rx="36" ry="52" />
+            <line x1="8" y1="60" x2="112" y2="60" />
+            <line x1="60" y1="8" x2="60" y2="112" />
+          </svg>
         </div>
-        <div className="art art--ring" />
+        <img className="art art--foto" src="/media/perfil.webp" alt={perfil.fotoAlt} width="800" height="848" />
+        <div className="art art--dark" aria-hidden="true">
+          <span className="art__luna" />
+          <svg viewBox="0 0 100 60" preserveAspectRatio="none">
+            {[30, 38, 46, 54].map((y) => <line key={y} x1="0" y1={y} x2="100" y2={y} />)}
+            {[0, 20, 40, 60, 80, 100].map((x) => <line key={x} x1="50" y1="22" x2={x} y2="60" />)}
+            <polyline points="0,40 14,30 26,36 40,22 52,32 66,18 80,30 100,24" />
+          </svg>
+        </div>
+        <svg className="art art--spark art--spark1" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0 12 8 20 10 12 12 10 20 8 12 0 10 8 8Z" /></svg>
+        <svg className="art art--spark art--spark2" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0 12 8 20 10 12 12 10 20 8 12 0 10 8 8Z" /></svg>
+        <svg className="art art--spark art--spark3" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 0 12 8 20 10 12 12 10 20 8 12 0 10 8 8Z" /></svg>
       </div>
     </section>
   );

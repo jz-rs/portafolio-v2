@@ -6,6 +6,7 @@ import Experiencia from "./components/Experiencia.jsx";
 import Voluntariados from "./components/Voluntariados.jsx";
 import Formacion from "./components/Formacion.jsx";
 import Cursos from "./components/Cursos.jsx";
+import Galeria from "./components/Galeria.jsx";
 import Contacto from "./components/Contacto.jsx";
 import Footer from "./components/Footer.jsx";
 
@@ -21,6 +22,7 @@ export default function App() {
         <Proyectos />
         <Cursos />
         <Voluntariados />
+        <Galeria />
         <Contacto />
       </main>
       <Footer />
