@@ -150,6 +150,8 @@ export const experiencia = [
     empresa: "Eclypsium",
     rol: "Pasante en Desarrollo de Plugins de Seguridad",
     periodo: "Agosto 2025 — Octubre 2025",
+    link: `${CERT}/eclypsium-carta-recomendacion.pdf`,
+    linkTexto: "Ver carta de recomendación",
     descripcion:
       "Trabajé en el área de Ingeniería, en el desarrollo y la mejora del motor Abram Linter. Todo lo que desarrollé se integró al repositorio principal del proyecto.",
     detalle: [
@@ -186,6 +188,7 @@ export const voluntariados = [
     nombre: "ONIET — Olimpíadas Nacionales",
     rol: "Voluntaria en competencias",
     periodo: "Octubre 2025",
+    links: [{ url: `${CERT}/oniet-2025-voluntariado.pdf`, texto: "Ver certificado" }],
     descripcion:
       "Colaboré en las competencias “Innovation Team” y “Electrónica Discreta”, brindando apoyo operativo y técnico durante las jornadas realizadas en el campus de la Universidad Blas Pascal.",
   },
@@ -206,7 +209,7 @@ export const galeria = [
   { tipo: "imagen", src: `${MEDIA}/eclypsium-reconocimiento.webp`, etiqueta: "Eclypsium", texto: "Reconocimiento por mi trabajo en Abram QA." },
   { tipo: "imagen", src: `${MEDIA}/capitalinas.webp`, etiqueta: "Eclypsium", texto: "Capitalinas, el complejo de Córdoba donde trabajaba para Eclypsium." },
   { tipo: "video", src: `${MEDIA}/metodos-numericos.mp4`, poster: `${MEDIA}/metodos-numericos.webp`, etiqueta: "Formación", texto: "Preparando mi final de Métodos Numéricos." },
-  { tipo: "imagen", src: `${MEDIA}/clases-particulares.webp`, etiqueta: "Formación", texto: "Dando una mano a compañeros con algunas materias. La silla es porque no llego a lo alto del pizarrón." },
+  { tipo: "imagen", src: `${MEDIA}/clases-particulares.webp`, etiqueta: "Formación", texto: "Ayudando a algunos compañeros con algunas materias. La silla es porque no llego a lo alto del pizarrón, jajaja." },
   { tipo: "imagen", src: `${MEDIA}/reunion-coneau.webp`, etiqueta: "Formación", texto: "Reunión con la CONEAU: con un grupo de alumnos seleccionados, respondimos preguntas sobre la calidad de la carrera." },
   { tipo: "imagen", src: `${MEDIA}/proyecto-final.webp`, etiqueta: "Ristorino", texto: "Preparando el proyecto final." },
   { tipo: "video", src: `${MEDIA}/ristorino-flow.mp4`, poster: `${MEDIA}/ristorino-flow.webp`, ancho: true, etiqueta: "Ristorino", texto: "Recorrido por la app." },

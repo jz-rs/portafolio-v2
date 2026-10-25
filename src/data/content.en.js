@@ -148,6 +148,8 @@ export const experiencia = [
     empresa: "Eclypsium",
     rol: "Security Plugin Development Intern",
     periodo: "August 2025 — October 2025",
+    link: `${CERT}/eclypsium-carta-recomendacion.pdf`,
+    linkTexto: "View recommendation letter (in Spanish)",
     descripcion:
       "I worked in the Engineering team on developing and improving the Abram Linter engine. Everything I built was merged into the project's main repository.",
     detalle: [
@@ -184,6 +186,7 @@ export const voluntariados = [
     nombre: "ONIET — National Olympiads",
     rol: "Competition volunteer",
     periodo: "October 2025",
+    links: [{ url: `${CERT}/oniet-2025-voluntariado.pdf`, texto: "View certificate (in Spanish)" }],
     descripcion:
       "I collaborated in the “Innovation Team” and “Electrónica Discreta” competitions, providing operational and technical support during the events held at the Universidad Blas Pascal campus.",
   },
@@ -204,7 +207,7 @@ export const galeria = [
   { tipo: "imagen", src: `${MEDIA}/eclypsium-reconocimiento.webp`, etiqueta: "Eclypsium", texto: "Recognition for my work on Abram QA." },
   { tipo: "imagen", src: `${MEDIA}/capitalinas.webp`, etiqueta: "Eclypsium", texto: "Capitalinas, the Córdoba complex where I worked for Eclypsium." },
   { tipo: "video", src: `${MEDIA}/metodos-numericos.mp4`, poster: `${MEDIA}/metodos-numericos.webp`, etiqueta: "Education", texto: "Preparing for my Numerical Methods final exam." },
-  { tipo: "imagen", src: `${MEDIA}/clases-particulares.webp`, etiqueta: "Education", texto: "Helping classmates with some of their courses. The chair is because I can't reach the top of the whiteboard." },
+  { tipo: "imagen", src: `${MEDIA}/clases-particulares.webp`, etiqueta: "Education", texto: "Helping some classmates with a few subjects. The chair is because I can't reach the top of the whiteboard, haha." },
   { tipo: "imagen", src: `${MEDIA}/reunion-coneau.webp`, etiqueta: "Education", texto: "Meeting with CONEAU (Argentina's university accreditation agency): with a group of selected students, we answered questions about the quality of the degree." },
   { tipo: "imagen", src: `${MEDIA}/proyecto-final.webp`, etiqueta: "Ristorino", texto: "Working on my final project." },
   { tipo: "video", src: `${MEDIA}/ristorino-flow.mp4`, poster: `${MEDIA}/ristorino-flow.webp`, ancho: true, etiqueta: "Ristorino", texto: "A walkthrough of the app." },

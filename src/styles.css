@@ -211,7 +211,9 @@ main, .nav, .footer { width: min(1180px, calc(100% - 32px)); margin-inline: auto
 .vol__periodo { margin: 0 0 8px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--terra-d); }
 .vol h3 { font-size: 1.15rem; margin-bottom: 4px; }
 .vol__rol { margin: 0 0 10px; font-weight: 600; }
-.vol p:last-child { margin: 0; color: var(--muted); }
+.vol p:last-of-type { margin: 0; color: var(--muted); }
+.vol__link { display: inline-block; margin-top: 12px; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--terra-d); text-decoration: none; }
+.vol__link:hover { text-decoration: underline; }
 .card .chips { margin-bottom: 0; }
 .edu-list { display: grid; gap: 20px; }
 .edu {
