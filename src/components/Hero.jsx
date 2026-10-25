@@ -1,6 +1,14 @@
 import { useLang } from "../i18n.jsx";
 import FishIcon from "./FishIcon.jsx";
 
+// Años cumplidos a hoy, a partir de una fecha "AAAA-MM-DD".
+function aniosCumplidos(fecha) {
+  const [a, m, d] = fecha.split("-").map(Number);
+  const hoy = new Date();
+  const yaCumplio = hoy.getMonth() + 1 > m || (hoy.getMonth() + 1 === m && hoy.getDate() >= d);
+  return hoy.getFullYear() - a - (yaCumplio ? 0 : 1);
+}
+
 export default function Hero() {
   const { perfil, ui } = useLang().c;
   // Primera palabra del título en una línea y el resto, resaltado, en la siguiente.
@@ -27,6 +35,13 @@ export default function Hero() {
               <circle cx="12" cy="10" r="2.4" />
             </svg>
             {perfil.ubicacion}
+          </li>
+          <li>
+            <svg className="hero__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4" y="5.5" width="16" height="14.5" rx="2.5" />
+              <path d="M4 10h16M8.5 3.5v4M15.5 3.5v4" />
+            </svg>
+            {perfil.edad.replace("{n}", aniosCumplidos(perfil.nacimiento))}
           </li>
           <li>
             <span className="hero__status" aria-hidden="true" />

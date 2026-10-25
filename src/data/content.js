@@ -12,6 +12,9 @@ export const perfil = {
   frase:
     "Diseño y desarrollo soluciones de software de punta a punta, con foco en la calidad, la claridad y el impacto en el negocio.",
   ubicacion: "Córdoba, Argentina",
+  // La edad se calcula sola a partir del cumpleaños (2 de julio de 2002).
+  nacimiento: "2002-07-02",
+  edad: "{n} años",
   fotoAlt: "Foto de Jezabel Rosso",
   disponibilidad: "Siempre abierta a escuchar propuestas",
 };

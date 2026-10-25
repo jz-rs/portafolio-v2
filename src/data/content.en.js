@@ -11,6 +11,9 @@ export const perfil = {
   frase:
     "I design and build end-to-end software solutions, with a focus on quality, clarity and business impact.",
   ubicacion: "Córdoba, Argentina",
+  // La edad se calcula sola a partir del cumpleaños (2 de julio de 2002).
+  nacimiento: "2002-07-02",
+  edad: "{n} years old",
   fotoAlt: "Photo of Jezabel Rosso",
   disponibilidad: "Always open to hearing about new opportunities",
 };
