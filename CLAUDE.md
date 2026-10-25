@@ -28,7 +28,7 @@ Sitio publicado: https://portafolio-v2-cyan.vercel.app (proyecto `portafolio-v2`
 - ODS Córdoba y S-interio son trabajos pagos y actuales; van en Experiencia laboral, no en Proyectos. El proyecto final es Ristorino.
 - No publicar datos de contacto (mail, teléfono) sin que ella lo confirme. Ya confirmó el mail (jezabel.rosso.it@gmail.com), GitHub y LinkedIn; el teléfono no se publica. Tampoco el DNI: en los certificados va tapado. Los códigos de verificación de los certificados quedan visibles, porque sirven para que RRHH compruebe que son reales (lo recomendó Claude; falta que ella lo confirme).
 - Nunca subir claves, tokens ni archivos `.env` al repositorio.
-- Las carpetas de certificados y material de cursos que están fuera del repo (Escritorio) son solo de lectura: no se modifican. La excepción es `Desktop\certificados`, que ella creó para guardar las copias con el DNI tapado.
+- Las carpetas de certificados y material de cursos que están fuera del repo (Escritorio) son solo de lectura: no se modifican. La excepción es `Desktop\certificados`, que ella creó para guardar las copias con el DNI tapado. En `Desktop\Cursos` ella pidió que se renombraran los certificados con el mismo nombre que sus copias (por ejemplo, "UBP - Analitica de Datos.pdf"), sin tocar el contenido.
 
 ## Diseño
 - Paleta cálida: crema `#fbf1e3`, bordó `#6b1e2e` (`--terra`), bordó oscuro `#4a1420` (`--terra-d`, para botones y fondos con texto), rosado `#e8a9b3` (`--accent-on-dark`, para texto y detalles sobre fondos oscuros), verde oliva `#6b6a3a`, casi negro `#1c1613`.
