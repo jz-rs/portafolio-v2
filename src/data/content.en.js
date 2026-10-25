@@ -3,6 +3,7 @@
 
 const GH = "https://github.com/jz-rs";
 const MEDIA = "/media/galeria";
+const CERT = "/certificados";
 
 export const perfil = {
   nombre: "Jezabel Rosso",
@@ -17,6 +18,7 @@ export const perfil = {
 export const proyectoFinal = {
   nombre: "Ristorino",
   subtitulo: "Restaurant portal built on a SOA architecture",
+  periodo: "August 2025 — October 2026",
   descripcion:
     "Web portal to search restaurants, browse their promotions and book a table. It doesn't store restaurant data: it queries each restaurant live, over REST or SOAP, and uses AI (Gemini) for natural-language search and to generate promotional content.",
   puntos: [
@@ -171,8 +173,10 @@ export const voluntariados = [
     periodo: "July 2026 — Present",
     actual: true,
     destacado: true,
-    link: "https://youtu.be/U19i2LFYMh4",
-    linkTexto: "Watch the talk",
+    links: [
+      { url: "https://youtu.be/U19i2LFYMh4", texto: "Watch the talk" },
+      { url: "https://www.instagram.com/nasaspaceappscanete", texto: "View the Instagram" },
+    ],
     descripcion:
       "I'm part of the organizing team: I create and share social media content and communicate the event's activities. I was also a speaker at the training sessions ahead of the hackathon, with the talk “Road to Next: Construye con lo que tienes” (Next is You series, together with TechSpira).",
   },
@@ -196,14 +200,18 @@ export const galeria = [
   { tipo: "imagen", src: `${MEDIA}/capacitacion-tickets.webp`, etiqueta: "S-interio", texto: "Training session on the internal ticketing system." },
   { tipo: "imagen", src: `${MEDIA}/extension-chrome.webp`, ancho: true, etiqueta: "S-interio", texto: "The company's Chrome extension, organized by area." },
   { tipo: "imagen", src: `${MEDIA}/github-actividad.webp`, ancho: true, contener: true, etiqueta: "S-interio", texto: "My GitHub activity on the S-interio account." },
+  { tipo: "video", src: `${MEDIA}/ods-mapa.mp4`, poster: `${MEDIA}/ods-mapa.webp`, ancho: true, etiqueta: "ODS Córdoba", texto: "Collaborative map of reports across the city." },
   { tipo: "imagen", src: `${MEDIA}/eclypsium-reconocimiento.webp`, etiqueta: "Eclypsium", texto: "Recognition for my work on Abram QA." },
   { tipo: "imagen", src: `${MEDIA}/capitalinas.webp`, etiqueta: "Eclypsium", texto: "Capitalinas, the Córdoba complex where I worked for Eclypsium." },
   { tipo: "video", src: `${MEDIA}/metodos-numericos.mp4`, poster: `${MEDIA}/metodos-numericos.webp`, etiqueta: "Education", texto: "Preparing for my Numerical Methods final exam." },
+  { tipo: "imagen", src: `${MEDIA}/clases-particulares.webp`, etiqueta: "Education", texto: "Helping classmates with some of their courses. The chair is because I can't reach the top of the whiteboard." },
+  { tipo: "imagen", src: `${MEDIA}/reunion-coneau.webp`, etiqueta: "Education", texto: "Meeting with CONEAU (Argentina's university accreditation agency): with a group of selected students, we answered questions about the quality of the degree." },
   { tipo: "imagen", src: `${MEDIA}/proyecto-final.webp`, etiqueta: "Ristorino", texto: "Working on my final project." },
   { tipo: "video", src: `${MEDIA}/ristorino-flow.mp4`, poster: `${MEDIA}/ristorino-flow.webp`, ancho: true, etiqueta: "Ristorino", texto: "A walkthrough of the app." },
   { tipo: "video", src: `${MEDIA}/photolab-express.mp4`, poster: `${MEDIA}/photolab-express.webp`, ancho: true, etiqueta: "PhotoLab Express", texto: "A walkthrough of the app." },
   { tipo: "imagen", src: `${MEDIA}/nasa-entrevista.webp`, etiqueta: "NASA Space Apps", texto: "Interview to join as a volunteer." },
   { tipo: "imagen", src: `${MEDIA}/nasa-preparacion.webp`, etiqueta: "NASA Space Apps", texto: "Preparing the talk “Road to Next: Construye con lo que tienes”." },
+  { tipo: "imagen", src: `${MEDIA}/nasa-flyer.webp`, contener: true, etiqueta: "NASA Space Apps", texto: "Flyer for the talk." },
   { tipo: "video", src: `${MEDIA}/nasa-charla.mp4`, poster: `${MEDIA}/nasa-charla.webp`, ancho: true, etiqueta: "NASA Space Apps", texto: "Highlights from the talk." },
 ];
 
@@ -225,63 +233,73 @@ export const formacion = [
 export const cursos = [
   {
     area: "Development",
-    nombre: "Python Programming",
+    nombre: "Introductory Python Course",
     institucion: "IEEE Student Chapter ITBA",
     fecha: "May 2022",
+    certificado: `${CERT}/ieee-itba-python.pdf`,
   },
   {
     area: "Development",
     nombre: "Introduction to Frontend Development with React",
     institucion: "UTN Facultad Regional Córdoba",
     fecha: "December 2023",
+    certificado: `${CERT}/utn-react.pdf`,
   },
   {
     area: "Development",
     nombre: "Introduction to Backend Development with Node.js",
     institucion: "UTN Facultad Regional Córdoba",
     fecha: "August 2023",
+    certificado: `${CERT}/utn-nodejs.pdf`,
   },
   {
     area: "Data, QA & security",
-    nombre: "SQL",
+    nombre: "Interactive SQL",
     institucion: "Desafío Latam",
     fecha: "February 2024",
+    certificado: `${CERT}/desafio-latam-sql.pdf`,
   },
   {
     area: "Data, QA & security",
     nombre: "Data Analytics",
     institucion: "Universidad Blas Pascal",
     fecha: "July 2024",
+    certificado: `${CERT}/ubp-analitica-de-datos.pdf`,
   },
   {
     area: "Data, QA & security",
-    nombre: "QA & Testing Program – Santex",
+    nombre: "XAcademy QA Program",
     institucion: "Santex",
     fecha: "December 2025",
+    certificado: `${CERT}/xacademy-qa.pdf`,
   },
   {
     area: "Data, QA & security",
     nombre: "Cybersecurity Workshop",
     institucion: "Ecosistema Tech by Desafío Latam",
     fecha: "March 2024",
+    certificado: `${CERT}/desafio-latam-ciberseguridad.pdf`,
   },
   {
     area: "Industry 4.0",
     nombre: "Automation Training",
     institucion: "Ingelearn",
     fecha: "February 2024",
+    certificado: `${CERT}/ingelearn-automation-training.webp`,
   },
   {
     area: "Industry 4.0",
-    nombre: "Industry 4.0 – IIoT, Python and Industrial Cybersecurity",
+    nombre: "Industry 4.0: IIoT, Python and Industrial Cybersecurity",
     institucion: "Ingelearn",
     fecha: "April 2024",
+    certificado: `${CERT}/ingelearn-industria-4-0.webp`,
   },
   {
     area: "Industry 4.0",
-    nombre: "Industry 4.0 Automation Project – PLC, Node-RED and Python Applications",
+    nombre: "Project 4.0: Automation and Industry 4.0 (second edition)",
     institucion: "Ingelearn",
     fecha: "March 2026",
+    certificado: `${CERT}/ingelearn-proyecto-4-0.webp`,
   },
 ];
 
@@ -320,6 +338,7 @@ export const ui = {
   verProyectos: "View projects",
   actual: "Current",
   verGithub: "View on GitHub",
+  verCertificado: "View certificate",
   verRepo: "View repository",
   diagrama: "Ristorino architecture",
   contactoTitulo: "Let's work together",

@@ -29,10 +29,14 @@ export default function Voluntariados() {
             <h3>{v.nombre}</h3>
             {v.rol && <p className="vol-destacado__rol">{v.rol}</p>}
             <p>{v.descripcion}</p>
-            {v.link && (
-              <a className="btn btn--live" href={v.link} target="_blank" rel="noreferrer">
-                {v.linkTexto} ↗
-              </a>
+            {v.links && (
+              <div className="vol-destacado__links">
+                {v.links.map((l) => (
+                  <a key={l.url} className="btn btn--live" href={l.url} target="_blank" rel="noreferrer">
+                    {l.texto} ↗
+                  </a>
+                ))}
+              </div>
             )}
           </div>
         </article>

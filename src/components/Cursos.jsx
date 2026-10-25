@@ -17,6 +17,11 @@ export default function Cursos() {
                 <li key={c.nombre}>
                   <p className="curso__nombre">{c.nombre}</p>
                   <p className="card__meta">{c.institucion} · {c.fecha}</p>
+                  {c.certificado && (
+                    <a className="curso__certificado" href={c.certificado} target="_blank" rel="noreferrer">
+                      {ui.verCertificado} ↗
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

@@ -10,6 +10,7 @@ export default function ProyectoFinal() {
           <span className="tag tag--light">{ui.secciones.proyectoFinal}</span>
           <h2>{p.nombre}</h2>
           <p className="band__sub">{p.subtitulo}</p>
+          {p.periodo && <p className="band__periodo">{p.periodo}</p>}
           <p>{p.descripcion}</p>
           <ul className="band__list">
             {p.puntos.map((t) => (
