@@ -39,7 +39,7 @@ Repositorio: https://github.com/jz-rs/portafolio-v2 (rama `main`). Sitio publica
 El orden está pensado para RRHH: primero la experiencia laboral. El menú (`Navbar.jsx`) sigue el mismo orden que la página (`App.jsx`).
 
 ## Contenido (`src/data/content.js`)
-- `perfil`: `fotoAlt` es el texto alternativo de la foto. `edad` va al lado de la ubicación, con un ícono de calendario en bordó; `{n}` se reemplaza por los años cumplidos, que `Hero.jsx` calcula con `nacimiento`. El título de la portada toma la primera palabra de `titulo` en una línea y el resto, resaltado, en la siguiente.
+- `perfil`: `fotoAlt` es el texto alternativo de la foto. La edad y la fecha de nacimiento no se publican, por decisión de ella. El título de la portada toma la primera palabra de `titulo` en una línea y el resto, resaltado, en la siguiente.
 - `proyectoFinal` (Ristorino): `periodo` es el tiempo de desarrollo, debajo del subtítulo.
 - `proyectos`: el orden del array es el orden en la página. Cada uno tiene `nombre`, `archivo` (nombre del repo en GitHub, arma el link), `descripcion` y `stack`. Los títulos quedan cortos a propósito.
 - `experiencia`: cada trabajo tiene `empresa`, `rol`, `periodo` (formato "Marzo 2026 — Actualidad", con raya larga) y `descripcion`. Además puede tener `organizacion` (línea debajo del cargo y el período, para el empleador), `detalle` (grupos con `titulo` e `items`, se muestran como listas), `stack` (etiquetas de tecnologías, sin números de versión), `link`/`linkTexto` (botón rosado; en Eclypsium, la carta de recomendación) y `actual: true`.
@@ -54,4 +54,9 @@ El orden está pensado para RRHH: primero la experiencia laboral. El menú (`Nav
 - Media: imágenes en WebP (máx. 1400px) y videos comprimidos con ffmpeg (H.264, 1280px, 24 fps, audio mono 64k).
 - Certificados (`public/certificados/`): PDF livianos (los pesados se pasan a imagen JPEG dentro del PDF) o WebP, siempre con el DNI tapado y borrado del texto, y sin metadatos.
 - Visitas (`src/visitas.js`, se arranca en `main.jsx`): manda visitas, secciones vistas, clics y tiempo al panel privado (repo `panel-portafolio`, en `/api/evento`). Sin cookies. No cuenta en desarrollo (salvo con `VITE_PANEL_URL`) ni a quien abrió el sitio con `?nocontar=1`. Los clics se nombran sin depender del idioma (por ejemplo, "Certificado: utn-react", "GitHub: ristorino-portal"). Los links con `?ref=` (por ejemplo `?ref=cv`) muestran en el panel por qué canal llegó la visita.
+- Build: `npm run build` compila el sitio y después `src/entry-server.jsx` + `scripts/prerender.mjs` meten el HTML en español dentro de `dist/index.html`, para buscadores y vistas previas. En el navegador, `main.jsx` lo reemplaza con `createRoot` y `flushSync`; las visitas arrancan después, porque si no observarían las secciones viejas y tomarían mal el idioma.
+- Seguridad: `vercel.json` define los encabezados (CSP y anti-iframe). Si se agrega un recurso externo (fuente, imagen, API), hay que permitirlo en la CSP o el navegador lo bloquea. La CSP no se aplica a los PDF.
+- Consola: `src/consola.js` muestra la firma con la paleta del sitio.
+- CV: `public/CV-Jezabel-Rosso.pdf`, copia de `marca-personal` (solo en español); botón en la portada. Si cambia el CV, volver a copiarlo.
+- Vista previa al compartir: `public/og-image.png` (1200x630) y las etiquetas de `index.html`. `robots.txt`, `sitemap.xml` y las etiquetas usan la URL de Vercel: actualizarlas si algún día hay dominio propio.
 - Escribir los archivos de una sola vez (archivo temporal y después renombrar). Si un archivo queda vacío aunque sea un instante, Vite puede quedarse con esa versión y la página queda en blanco. Si pasa, alcanza con volver a guardar el archivo.

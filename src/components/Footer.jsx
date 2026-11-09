@@ -9,6 +9,7 @@ export default function Footer() {
       <span className="footer__brand">
         <FishIcon size={20} /> {perfil.nombre} · {perfil.titulo}
       </span>
+      <small>© {new Date().getFullYear()} {perfil.nombre}. {ui.derechos}</small>
       <a href="#inicio">{ui.volverArriba} ↑</a>
     </footer>
   );

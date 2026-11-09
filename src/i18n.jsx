@@ -17,8 +17,8 @@ function idiomaInicial() {
   return nav?.toLowerCase().startsWith("es") ? "es" : "en";
 }
 
-export function LangProvider({ children }) {
-  const [lang, setLang] = useState(idiomaInicial);
+export function LangProvider({ children, inicial }) {
+  const [lang, setLang] = useState(inicial ?? idiomaInicial);
 
   useEffect(() => {
     document.documentElement.lang = lang;
