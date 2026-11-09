@@ -211,6 +211,7 @@ export const galeria = [
   { tipo: "video", src: `${MEDIA}/metodos-numericos.mp4`, poster: `${MEDIA}/metodos-numericos.webp`, etiqueta: "Formación", texto: "Preparando mi final de Métodos Numéricos." },
   { tipo: "imagen", src: `${MEDIA}/clases-particulares.webp`, etiqueta: "Formación", texto: "Ayudando a algunos compañeros con algunas materias. La silla es porque no llego a lo alto del pizarrón, jajaja." },
   { tipo: "imagen", src: `${MEDIA}/reunion-coneau.webp`, etiqueta: "Formación", texto: "Reunión con la CONEAU: con un grupo de alumnos seleccionados, respondimos preguntas sobre la calidad de la carrera." },
+  { tipo: "imagen", src: `${MEDIA}/reconocimiento-capilla.webp`, contener: true, etiqueta: "Formación", texto: "Reconocimiento del Concejo Deliberante de Capilla del Monte por recibirme de Ingeniera Informática." },
   { tipo: "imagen", src: `${MEDIA}/proyecto-final.webp`, etiqueta: "Ristorino", texto: "Preparando el proyecto final." },
   { tipo: "video", src: `${MEDIA}/ristorino-flow.mp4`, poster: `${MEDIA}/ristorino-flow.webp`, ancho: true, etiqueta: "Ristorino", texto: "Recorrido por la app." },
   { tipo: "video", src: `${MEDIA}/photolab-express.mp4`, poster: `${MEDIA}/photolab-express.webp`, ancho: true, etiqueta: "PhotoLab Express", texto: "Recorrido por la app." },

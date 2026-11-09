@@ -209,6 +209,7 @@ export const galeria = [
   { tipo: "video", src: `${MEDIA}/metodos-numericos.mp4`, poster: `${MEDIA}/metodos-numericos.webp`, etiqueta: "Education", texto: "Preparing for my Numerical Methods final exam." },
   { tipo: "imagen", src: `${MEDIA}/clases-particulares.webp`, etiqueta: "Education", texto: "Helping some classmates with a few subjects. The chair is because I can't reach the top of the whiteboard, haha." },
   { tipo: "imagen", src: `${MEDIA}/reunion-coneau.webp`, etiqueta: "Education", texto: "Meeting with CONEAU (Argentina's university accreditation agency): with a group of selected students, we answered questions about the quality of the degree." },
+  { tipo: "imagen", src: `${MEDIA}/reconocimiento-capilla.webp`, contener: true, etiqueta: "Education", texto: "Recognition from the Capilla del Monte Town Council for earning my Computer Engineering degree." },
   { tipo: "imagen", src: `${MEDIA}/proyecto-final.webp`, etiqueta: "Ristorino", texto: "Working on my final project." },
   { tipo: "video", src: `${MEDIA}/ristorino-flow.mp4`, poster: `${MEDIA}/ristorino-flow.webp`, ancho: true, etiqueta: "Ristorino", texto: "A walkthrough of the app." },
   { tipo: "video", src: `${MEDIA}/photolab-express.mp4`, poster: `${MEDIA}/photolab-express.webp`, ancho: true, etiqueta: "PhotoLab Express", texto: "A walkthrough of the app." },
